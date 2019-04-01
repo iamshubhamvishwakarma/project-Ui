@@ -29,6 +29,9 @@ import { ProductGridItemComponent } from './ProductDisplay/product-grid-item/pro
 import { ProductHolderComponent } from './ProductDisplay/product-holder/product-holder.component';
 import { ItemPlaceholderComponent } from './Shared/item-placeholder/item-placeholder.component';
 import { OfferBySiteComponent } from './Deals/offer-by-site/offer-by-site.component';
+import { SocialOptionsComponent } from './Home/social-options/social-options.component';
+import { SitePlaceholderComponent } from './Shared/site-placeholder/site-placeholder.component';
+import { BannersComponent } from './Home/banners/banners.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +59,10 @@ import { OfferBySiteComponent } from './Deals/offer-by-site/offer-by-site.compon
     ProductGridItemComponent,
     ProductHolderComponent,
     ItemPlaceholderComponent,
-    OfferBySiteComponent
+    OfferBySiteComponent,
+    SocialOptionsComponent,
+    SitePlaceholderComponent,
+    BannersComponent
   ],
   imports: [
     BrowserModule,

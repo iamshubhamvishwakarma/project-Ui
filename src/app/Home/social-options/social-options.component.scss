@@ -1,0 +1,30 @@
+.follow-us-wrapper {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.follow-us-items i {
+  font-size: 23px;
+  margin-left: 25px;
+  margin-right: 25px;
+  transition: all 100ms ease-in-out;
+}
+.follow-us-items i:hover {
+  transform: rotate(300deg)
+}
+.follow-us-items span {
+  font-size: 18px;
+}
+.whtasapp {
+  color: rgb(81, 206, 95);
+}
+.telegram {
+  color: rgb(50, 169, 220);
+}
+.facebook {
+  color: #48649f;
+}
+.instagram {
+  color: rgb(194, 32, 132);
+}

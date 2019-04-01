@@ -22,7 +22,7 @@ $padding: 20px;
 }
 
 .categories,
-.offers {
+.sites {
   display: flex;
   justify-content: center;
   overflow-x: auto;
@@ -38,7 +38,8 @@ $padding: 20px;
   display: flex;
   flex-direction: column;
 }
-.offer-title, .follow-us-title {
+.offer-title,
+.follow-us-title {
   margin-left: 60px;
   font-size: 19px;
   font-weight: 900;
@@ -46,8 +47,12 @@ $padding: 20px;
 .details-container {
   color: #e9ecef;
 }
+.follow-us-holder {
+  padding: 10px;
+  margin-bottom: 20px;
+  
+}
 
- 
 .follow-us-items {
   display: flex;
   flex-direction: row;

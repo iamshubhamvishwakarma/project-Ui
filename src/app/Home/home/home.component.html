@@ -21,24 +21,24 @@
       <UI-item-holder [items]="items"></UI-item-holder>
     </ul>
   </div>
-  <div class="follow-us-wrapper">
-    <div class="follow-us-title">Get Price Drop deals</div>
-    <div class="follow-us-items advance-card" >
-      <i class="fa fa-whatsapp    "></i>
-      <i class="fa   fa-telegram    "></i>
-      <i class="fa fa-facebook-f    "></i>
-      fa-telegram
-    </div>
+  <div class="follow-us-holder">
+    <!-- <div class="follow-us-title">Get Price Drop deals</div> -->
+    <UI-social-options></UI-social-options>
   </div>
   <div class="offer-by-site-container">
     <div class="offer-title">
       OFFER BY SITES
     </div>
     <div class="offers">
-      <UI-offer-by-site
-        [site]="site"
-        *ngFor="let site of sites"
-      ></UI-offer-by-site>
+      <div class="sites" *ngIf="sites;else siteplaceholder">
+        <UI-offer-by-site
+          [site]="site"
+          *ngFor="let site of sites"
+        ></UI-offer-by-site>
+      </div>
+      <ng-template #siteplaceholder>
+        <UI-site-placeholder *ngFor="let item of items"></UI-site-placeholder>
+      </ng-template>
     </div>
   </div>
 </div>

@@ -8,6 +8,7 @@ import { FetchService } from "../../Service/fetch.service";
 export class HomeComponent implements OnInit {
   items: any;
   sites: any;
+  placeholderItem = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
   constructor(private fetchService: FetchService) {}
 
   ngOnInit() {

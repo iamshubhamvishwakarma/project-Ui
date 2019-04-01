@@ -1,0 +1,27 @@
+.offer-by-site-wrapper {
+    width: 100px;
+    margin: 20px;
+    height: 100px;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+  }
+  .site-image {
+    display: flex;
+    justify-content: center;
+  }
+  .site-image i {
+    font-size: 40px;
+  }
+  .offer-container {
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    padding-top: 10px;
+    background: #e9ecef;
+  }
+  .site-name {
+    letter-spacing: 3px;
+    text-align: center;
+  }
+  
