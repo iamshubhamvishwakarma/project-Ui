@@ -1,0 +1,149 @@
+$border-color: #dde1e3;
+.product-holder {
+  height: 100%;
+  margin: 10px;
+
+  font-family: "Roboto", sans-serif;
+}
+.head-image {
+  width: 100%;
+  display: flex;
+}
+.head-image img {
+  width: 50%;
+  overflow-x: hidden;
+}
+.table-header {
+  display: flex;
+  position: sticky;
+  top: 50px;
+  background: #ffffff;
+  position: -webkit-sticky;
+  z-index: 1;
+}
+.filter {
+  width: 19%;
+  border-right: 1px solid $border-color;
+}
+.filter-options {
+  width: 19%;
+ 
+  border-right: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+.filter-heading {
+  padding: 10px;
+  font-weight: 900;
+}
+.show {
+  width: 27%;
+}
+.sort-by {
+  width: 27%;
+}
+.side-option-row {
+  width: 100%;
+  display: flex;
+}
+.grid-list-compare {
+  width: 27%;
+}
+.filter-reset-icon {
+  justify-content: flex-end;
+  margin-left: auto;
+  padding: 10px;
+  color: #5495ff;
+  margin-right: 5px;
+  border-left: solid 1px $border-color;
+}
+.filter-reset-icon i {
+  transition: all 500ms cubic-bezier(1, 0.04, 0, 0.51);
+}
+.filter-reset-icon:hover i {
+  transform: rotate(360deg);
+}
+.filter-heading-wrapper,
+.sort-by-wrapper,
+.show-wrapper,
+.grid-list-compare-wrapper {
+  display: flex;
+  flex-direction: row;
+  border-bottom: solid 1px $border-color;
+}
+
+// sort-by
+.sort-by-wrapper,
+.show-wrapper {
+  display: flex;
+  padding: 10px;
+}
+.sort-by-heading,
+.show-heading {
+  margin-left: 20px;
+  font-weight: 500;
+}
+.sort-by-icon,
+.show-icon {
+  font-weight: 400;
+  margin-right: 15px;
+  margin-left: auto;
+}
+.sort-by-wrapper,
+.show-wrapper,
+.grid-list-compare-wrapper,
+.grid-wrapper,
+.list-wrapper {
+  border-right: 1px solid $border-color;
+}
+.grid-list-compare-wrapper {
+  display: flex;
+}
+.grid-wrapper,
+.list-wrapper,
+.compare-heading {
+  padding: 10px 20px 10px 20px;
+}
+
+// category
+.category-header,
+.brand-header {
+  padding: 20px 20px 10px 20px;
+  display: flex;
+}
+
+.category-title,
+.brand-title {
+  margin-left: 15px;
+  margin-right: 10px;
+  font-weight: 200;
+}
+.category-icon,
+.brand-icon {
+  margin-top: -4px;
+}
+.category-close-icon,
+.brand-close-icon {
+  margin-left: auto;
+}
+.category-items,
+.brand-items {
+  padding-left: 45px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+.item {
+  display: flex;
+  font-weight: 700;
+  padding-bottom: 10px;
+}
+
+.quantity {
+  margin-left: auto;
+  text-align: center;
+}
+.category-wrapper {
+  border-bottom: 1px solid $border-color;
+}
+.product-container{
+  width: 81%;
+}

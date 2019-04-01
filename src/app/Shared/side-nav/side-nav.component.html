@@ -1,0 +1,36 @@
+<div
+  class="side-nav amzo-card"
+  [ngStyle]="{ left: isSideNavOpen ? '0px' : '-300px' }"
+   
+>
+  <div class="close" (click)="closeSideNave()">
+    <i class="fa fa-window-close   "></i>
+  </div>
+  <div class="side-nav-item-wrapper">
+    <div class="side-nav-header">
+      <div class="icon">
+        <img src="../../../assets/logo-mdb-angular-small.png" alt="" />
+      </div>
+    </div>
+    <div class="home nav-item" id="home">
+      <i class="fa fa-home" aria-hidden="true"
+        ><label for="home">Home</label></i
+      >
+    </div>
+    <div class="wishlist nav-item" id="wishlist">
+      <i class="fa fa-bookmark-o" aria-hidden="true"
+        ><label for="wishlist">Bookmark</label></i
+      >
+    </div>
+    <div class="about nav-item" id="about">
+      <i class="fa fa-info" aria-hidden="true"
+        ><label for="about">About</label></i
+      >
+    </div>
+    <div class="profile nav-item" id="profile">
+      <i class="fa fa-user" aria-hidden="true"
+        ><label for="profile">Profile</label></i
+      >
+    </div>
+  </div>
+</div>

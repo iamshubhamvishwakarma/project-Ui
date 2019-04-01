@@ -1,0 +1,23 @@
+ 
+<div class="item-wrapper" (click)="openLink(item)">
+    <div *ngIf="item.offer" class="offer">{{item.offer}}</div>
+  <div class="item-image">
+    <img src="{{ item.image }}" alt="item.name" />
+  </div>
+  
+  <div class="item-details">
+    <div class="details-left">
+      <div class="item-name">
+        {{ item.name }}
+      </div>
+      <div class="item-price"><span>&#x20B9;</span> {{ item.price }}</div>
+    </div>
+    <div class="details-right">
+      <div class="source">{{ item.source }}</div>
+    </div>
+  </div>
+</div>
+<div class="hidden-content-wrapper">
+  <div class="amzo-card">Visit</div>
+
+</div>

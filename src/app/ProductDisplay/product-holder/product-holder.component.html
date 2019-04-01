@@ -1,0 +1,115 @@
+<div class="product-holder advance-card">
+  <div class="head-image">
+    <img src="{{ head_image_url }}" alt="" />
+    <img
+      src="https://images-eu.ssl-images-amazon.com/images/G/31/img17/Auto/GWgraphics/Helmets/1154600_GW_DesktopBillboard_1320X600_1546243595._UX440_SX440_CB459038501_.jpg"
+      alt=""
+    />
+  </div>
+  <!-- responsible for displying product item header with product grid or list component -->
+  <div class="table-wrapper">
+    <div class="table-header amzo-card">
+      <div class="filter">
+        <div class="filter-heading-wrapper">
+          <div class="filter-heading">Filter</div>
+          <div class="filter-reset-icon">
+            <i class="fa fa-refresh" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <div class="sort-by">
+        <div class="sort-by-wrapper">
+          <div class="sort-by-heading">SORT BY : Price</div>
+          <div class="sort-by-icon">
+            <i class="fa fa-sort-desc" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <div class="show">
+        <div class="show-wrapper">
+          <div class="show-heading">SHOW : 10</div>
+          <div class="show-icon">
+            <i class="fa fa-circle" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <div class="grid-list-compare">
+        <div class="grid-list-compare-wrapper">
+          <div class="grid-wrapper" [ngStyle]="{'color': isDisplayMode?'#5495ff':''}" (click)="displayGrid()">
+            <i class="fas fa-th"></i>
+          </div>
+          <div class="list-wrapper" [ngStyle]="{'color': !isDisplayMode?'#5495ff':''}" (click)="displayList()">
+            <i class="fas fa-list-ul"></i>
+          </div>
+          <div class="compare-heading">
+            COMPARE: 3
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="side-option-row">
+      <div class="filter-options">
+        <div class="filter-options-wrapper">
+          <div class="category">
+            <div class="category-wrapper">
+              <div class="category-header">
+                <div class="category-icon">
+                  <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                </div>
+                <div class="category-title">CATEGORIES</div>
+                <div class="category-close-icon">
+                  <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="category-items">
+                <div class="item" *ngFor="let item of categories">
+                  <div class="title">{{ item.title }}</div>
+                  <div class="quantity">{{ item.quantity }}</div>
+                </div>
+              </div>
+            </div>
+            <div class="brand">
+              <div class="brand-wrapper">
+                <div class="brand-header">
+                  <div class="brand-icon">
+                    <i class="fa fa-sort-desc" aria-hidden="true"></i>
+                  </div>
+                  <div class="brand-title">BRAND</div>
+                  <div class="brand-close-icon">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="brand-items">
+                  <div
+                    class="item"
+                    *ngFor="let item of categories; let i = index"
+                  >
+                    <div class="title">{{ item.title }}</div>
+                    <div class="quantity">
+                      <input
+                        type="checkbox"
+                        name="brands"
+                        (change)="filterList($event, i)"
+                        id="brands"
+                        value="{{ item.title }}"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-container">
+        <ng-container *ngIf="isDisplayMode; else elseTemplate">
+          <UI-product-grid  ></UI-product-grid>
+        </ng-container>
+        <ng-template #elseTemplate>
+          <UI-product-list  ></UI-product-list>
+        </ng-template>
+        
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+.deal-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.item-holder {
+  width: 90%;
+  margin-left: 5px;
+  margin-right: 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.item-holder::-webkit-scrollbar {
+  display: none;
+}
+.more-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: all ease-in-out 2000;
+}
+.more-button i {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bolder;
+}
+.more-button:hover i {
+  animation: onhovere 2s infinite;
+}
+@keyframes onhovere {
+  0% {
+    margin-right: 0px;
+  }
+  50% {
+    margin-right: -10px;
+  }
+  100% {
+    margin-right: 0px;
+  }
+}
+.next-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

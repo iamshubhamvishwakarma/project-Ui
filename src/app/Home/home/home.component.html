@@ -1,0 +1,44 @@
+<div class="home-container">
+  <div class="slider-wrapper">
+    <UI-slider></UI-slider>
+  </div>
+  <div class="categories">
+    <div class="h5">AMAZON</div>
+    <div class="h5">FLIPKART</div>
+    <div class="h5">SNAPDEAL</div>
+    <div class="h5">ShopClues</div>
+    <div class="h5">AJIO</div>
+    <div class="h5">MYNTRA</div>
+    <div class="h5">REDBUS</div>
+    <div class="h5">AMAZON</div>
+    <div class="h5">AMAZON</div>
+  </div>
+  <div class="top-deals">
+    <ul class="deals-container">
+      <div class="deal-label font-weight-bold">
+        HOT DEALS
+      </div>
+      <UI-item-holder [items]="items"></UI-item-holder>
+    </ul>
+  </div>
+  <div class="follow-us-wrapper">
+    <div class="follow-us-title">Get Price Drop deals</div>
+    <div class="follow-us-items advance-card" >
+      <i class="fa fa-whatsapp    "></i>
+      <i class="fa   fa-telegram    "></i>
+      <i class="fa fa-facebook-f    "></i>
+      fa-telegram
+    </div>
+  </div>
+  <div class="offer-by-site-container">
+    <div class="offer-title">
+      OFFER BY SITES
+    </div>
+    <div class="offers">
+      <UI-offer-by-site
+        [site]="site"
+        *ngFor="let site of sites"
+      ></UI-offer-by-site>
+    </div>
+  </div>
+</div>

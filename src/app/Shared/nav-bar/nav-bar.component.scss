@@ -1,0 +1,74 @@
+$z-index: 99;
+
+.nav-bar-wrapper {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  display: flex;
+  transition: all 0.2s ease-in;
+}
+
+.side-bar-icon {
+  font-size: 23px;
+  margin: 10px;
+  z-index: $z-index;
+}
+.side-bar-icon i{
+  font-size: 22px;
+
+}
+// creating menu bars
+.bars {
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.bar {
+  height: 3px;
+  margin-top: 3px;
+  transition: width 200ms ease-in-out;
+  background: #474747;
+}
+.bar1 {
+  width: 10px;
+}
+.bar2 {
+  width: 16px;
+}
+.bar3 {
+  width: 10px;
+}
+.bar4 {
+  width: 20px;
+}
+.bars:hover .bar1 {
+  width: 20px;
+}
+
+.bars:hover .bar2 {
+  width: 10px;
+}
+
+.bars:hover .bar3 {
+  width: 20px;
+}
+
+.bars:hover .bar4 {
+  width: 16px;
+}
+
+.solid-nav {
+  background: #5495ff;
+  
+}
+
+.loader {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.background-white{
+   color: #fff;
+}

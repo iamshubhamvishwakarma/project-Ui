@@ -1,0 +1,17 @@
+<div class="main-container">
+  <div class="top-bar">
+    <div class="side-nav">
+      <UI-side-nav></UI-side-nav>
+    </div>
+    <div class="nav-bar" >
+      <UI-nav-bar [isSolidNavbar]="isSolidNavbar"></UI-nav-bar>
+    </div>
+    
+  </div>
+  <div class="view-port">
+    <div class="component-holder" #holder>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <UI-bot></UI-bot>
+</div>

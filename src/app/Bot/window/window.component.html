@@ -1,0 +1,74 @@
+<div  >
+  <div
+    class="chat-window amzo-card"
+    style="background-color: #fff"
+    [ngStyle]="{ display: display === true ? 'none' : 'block' }"
+  >
+    <div class="chat-header amzo-card">
+      <i class="fa fa-android"> </i>
+      <div class="search-container">
+        <input
+          type="search"
+          [ngStyle]="{ display: isSearchEnable !== true ? 'none' : 'block' }"
+          placeholder="search"
+          [(ngModel)]="searchtext"
+          (ngModelChange)="filterList($event)"
+          class="search-box msg glowing-border amzo-card"
+        />
+        <div class=" " (click)="searchIconToggler()">
+          <fa-icon [icon]="searchICon"></fa-icon>
+        </div>
+      </div>
+    </div>
+    <div
+      class="chat-container "
+      id="message-list"
+      #scrollMe
+      [scrollTop]="scrollMe.scrollHeight"
+    >
+      <ul
+        id="message-list"
+        class="message-list"
+        *ngFor="let item of (messages | filter: searchtext)"
+      >
+        <div [ngClass]="{ right: !item.isFromMe }">
+          <UI-message [data]="item"></UI-message>
+        </div>
+
+        <li
+          *ngIf="item.isFromMe"
+          class="message-item-user advance-card message"
+          [innerHtml]="item.message | highlight: searchtext"
+        ></li>
+        <li
+          *ngIf="!item.isFromMe"
+          class="message-item-bot advance-card message"
+          [innerHtml]="item.message | highlight: searchtext"
+        ></li>
+      </ul>
+    </div>
+    <div class="chat-controls ">
+      <div style="background-color: #ffffff">
+        <!--<ul class="suggestion-list">
+        <li class="amzo-card" *ngFor="let suggestion of tempMsg"> {{suggestion}}
+          <li>
+      </ul>-->
+
+        <form>
+          <input
+            autocomplete="off"
+            autofocus
+            class="msg glowing-border"
+            placeholder="Type something..."
+            (ngSubmit)="sendMessage(form, event)"
+            name="msg"
+            [(ngModel)]="msg"
+          />
+          <button type="submit" (click)="sendMessage(msg)" class="msg-button">
+            <i class="fa fa-send"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

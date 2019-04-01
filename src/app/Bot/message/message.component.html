@@ -1,0 +1,28 @@
+<!--<li *ngIf="data.isFromMe"  class="message-item-user amzo-card">{{ data.message }}</li>
+
+<li *ngIf="!data.isFromMe" class="message-item-bot amzo-card">{{ data.message }}</li>
+-->
+
+<!--<li >{{data.message}}
+  <li>-->
+
+<ng-container *ngIf="data.isFromMe; else elseTemplate">
+  <div class="time-bot ripple">{{now | date:'h:mm a'}}
+    <i (click)="toggleLike()" style="float: right; margin-right: 10px; transition: 0.5s ease-in-out;" class="{{likeIcon}}" aria-hidden="true"></i>
+</div>
+<div class="name-icon">
+
+  <div class="icon amzo-card"><i class="fa fa-odnoklassniki" aria-hidden="true"></i>
+  </div>
+  <div class="name-bot">Bot</div>
+</div>
+
+</ng-container>
+<ng-template #elseTemplate>
+  <div class="time-user ripple">
+    <i style="float: right; margin-right: 10px;" (click)="toggleLike()"  class="{{likeIcon}}" aria-hidden="true"></i> {{now | date:'h:mm a'}} </div>
+<div class="name-icon">
+  <div class="name-user">You</div>
+  <div class="icon amzo-card "><i class="fa fa-user-o" aria-hidden="true"></i> </div>
+</div>
+</ng-template>

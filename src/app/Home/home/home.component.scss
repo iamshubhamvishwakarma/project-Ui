@@ -1,0 +1,54 @@
+$padding: 20px;
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+}
+.deals-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.deals-container::-webkit-scrollbar {
+  display: none;
+}
+.slider-wrapper {
+  margin: 10px;
+}
+.deal-label {
+  font-size: 19px;
+}
+
+.categories,
+.offers {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+}
+.categories .h5 {
+  letter-spacing: 3px;
+  font-size: 16px;
+  font-weight: 800;
+  margin: 15px 7px;
+  color: #e4e4e4f8;
+}
+.offer-by-site-container {
+  display: flex;
+  flex-direction: column;
+}
+.offer-title, .follow-us-title {
+  margin-left: 60px;
+  font-size: 19px;
+  font-weight: 900;
+}
+.details-container {
+  color: #e9ecef;
+}
+
+ 
+.follow-us-items {
+  display: flex;
+  flex-direction: row;
+}

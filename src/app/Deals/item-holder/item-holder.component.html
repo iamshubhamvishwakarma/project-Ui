@@ -1,0 +1,25 @@
+<div class="deal-wrapper">
+  <div class="next-wrapper">
+    <div class="advance-card more-button" (click)="scrollLeft()">
+      <i class="fa fa-angle-left" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="item-holder" #horidiv>
+    <ng-container *ngIf="items; else elseTemplate">
+      <UI-item
+        [item]="item"
+        *ngFor="let item of items; let i = index"
+      ></UI-item>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <UI-item-placeholder
+        *ngFor="let item of placeholderItem; let i = index"
+      ></UI-item-placeholder>
+    </ng-template>
+  </div>
+  <div class="next-wrapper ">
+    <div class="advance-card more-button" (click)="scrollRight()">
+      <i class="fa fa-angle-right " aria-hidden="true"></i>
+    </div>
+  </div>
+</div>

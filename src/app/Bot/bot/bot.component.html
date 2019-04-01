@@ -1,0 +1,12 @@
+<UI-window [display]="isOpen">
+</UI-window>
+
+<button (click)="this.toggleWindow()" class="chat-button">
+   <ng-container *ngIf="!isOpen; else elseTemplate">
+       <i class="fa fa-close" aria-hidden="true"></i>
+   </ng-container>
+   <ng-template #elseTemplate>
+    <i class="fas fa-comments"></i>
+   </ng-template>
+   
+</button>

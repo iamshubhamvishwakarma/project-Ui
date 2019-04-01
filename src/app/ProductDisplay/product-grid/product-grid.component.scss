@@ -1,0 +1,11 @@
+.item-container{
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+   
+}
+
+.item-container:last-child{
+    border-right: none;
+}
