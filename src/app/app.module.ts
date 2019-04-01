@@ -32,6 +32,7 @@ import { OfferBySiteComponent } from './Deals/offer-by-site/offer-by-site.compon
 import { SocialOptionsComponent } from './Home/social-options/social-options.component';
 import { SitePlaceholderComponent } from './Shared/site-placeholder/site-placeholder.component';
 import { BannersComponent } from './Home/banners/banners.component';
+import { CategoryComponent } from './Home/category/category.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { BannersComponent } from './Home/banners/banners.component';
     OfferBySiteComponent,
     SocialOptionsComponent,
     SitePlaceholderComponent,
-    BannersComponent
+    BannersComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,

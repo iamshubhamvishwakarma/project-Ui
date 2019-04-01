@@ -4,6 +4,7 @@ $padding: 20px;
   display: flex;
   flex-direction: column;
   padding-bottom: 10px;
+  margin: 10px;
 }
 .deals-container {
   overflow-x: auto;
@@ -15,7 +16,6 @@ $padding: 20px;
   display: none;
 }
 .slider-wrapper {
-  margin: 10px;
 }
 .deal-label {
   font-size: 19px;
@@ -50,7 +50,6 @@ $padding: 20px;
 .follow-us-holder {
   padding: 10px;
   margin-bottom: 20px;
-  
 }
 
 .follow-us-items {

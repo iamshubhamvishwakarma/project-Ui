@@ -1,0 +1,18 @@
+.banner-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  border-left: 1px solid #e9ecef;
+  text-align: center;
+  width: 50%;
+ 
+  border-bottom: 1px solid #e9ecef;
+}
+.column img{
+    width: 100%;
+}

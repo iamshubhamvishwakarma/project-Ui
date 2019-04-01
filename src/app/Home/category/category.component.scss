@@ -1,0 +1,28 @@
+.category-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.category-wrapper {
+  padding: 10px;
+}
+.grid-item {
+  padding: 10px;
+  text-align: center;
+}
+.grid-item i {
+  font-size: 25px;
+}
+.item-title {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
+.searchbox {
+  text-align: right;
+}
+.searchbox i{
+    font-size: 16px;
+}

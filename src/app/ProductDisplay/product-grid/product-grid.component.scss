@@ -1,11 +1,10 @@
-.item-container{
-    width: 100%;
-    display: grid;
+.item-container {
+  width: 100%;
+  display: grid;
 
-    grid-template-columns: 1fr 1fr 1fr;
-   
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.item-container:last-child{
-    border-right: none;
+.item-container:last-child {
+  border-right: none;
 }
