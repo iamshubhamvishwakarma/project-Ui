@@ -33,6 +33,7 @@ import { SocialOptionsComponent } from './Home/social-options/social-options.com
 import { SitePlaceholderComponent } from './Shared/site-placeholder/site-placeholder.component';
 import { BannersComponent } from './Home/banners/banners.component';
 import { CategoryComponent } from './Home/category/category.component';
+import { GiftcardComponent } from './Home/giftcard/giftcard.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { CategoryComponent } from './Home/category/category.component';
     SocialOptionsComponent,
     SitePlaceholderComponent,
     BannersComponent,
-    CategoryComponent
+    CategoryComponent,
+    GiftcardComponent
   ],
   imports: [
     BrowserModule,

@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SitePlaceholderComponent implements OnInit {
 
-  constructor() { }
+  constructor() {console.log("something"); }
  
   ngOnInit() {
+    
   }
 
 }

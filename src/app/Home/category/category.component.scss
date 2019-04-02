@@ -4,7 +4,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .category-wrapper {
-  padding: 10px;
+  // padding: 10px;
 }
 .grid-item {
   padding: 10px;
@@ -21,8 +21,13 @@
 }
 
 .searchbox {
-  text-align: right;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+  background: #5495ff;
 }
-.searchbox i{
-    font-size: 16px;
+.searchbox a {
+  float: right;
+  text-decoration: none;
+  color: #fff;
 }

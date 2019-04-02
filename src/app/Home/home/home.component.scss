@@ -18,7 +18,14 @@ $padding: 20px;
 .slider-wrapper {
 }
 .deal-label {
+   
   font-size: 19px;
+}
+.deal-label a {
+  float: right;
+  text-decoration: none;
+  justify-self: flex-end;
+  color: #5495ff;
 }
 
 .categories,
@@ -37,12 +44,20 @@ $padding: 20px;
 .offer-by-site-container {
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 .offer-title,
 .follow-us-title {
   margin-left: 60px;
   font-size: 19px;
   font-weight: 900;
+}
+.offer-title a {
+  text-decoration: none;
+  margin-right: 20px;
+  float: right;
+  color: #5495ff;
 }
 .details-container {
   color: #e9ecef;
@@ -52,7 +67,8 @@ $padding: 20px;
   margin-bottom: 20px;
 }
 
-.follow-us-items {
+.follow-us-items,
+.offers {
   display: flex;
   flex-direction: row;
 }

@@ -15,8 +15,9 @@
   </div>
   <div class="top-deals">
     <ul class="deals-container">
-      <div class="deal-label font-weight-bold">
-        HOT DEALS
+      <div class="deal-label ">
+        <div class="title font-weight-bold">HOT DEALS</div>
+        <a href="#">View all</a>
       </div>
       <UI-item-holder [items]="items"></UI-item-holder>
     </ul>
@@ -31,6 +32,7 @@
   <div class="offer-by-site-container">
     <div class="offer-title">
       OFFER BY SITES
+      <a href="#">View all</a>
     </div>
     <div class="offers">
       <div class="sites" *ngIf="sites;else siteplaceholder">
@@ -40,7 +42,7 @@
         ></UI-offer-by-site>
       </div>
       <ng-template #siteplaceholder>
-        <UI-site-placeholder *ngFor="let item of items"></UI-site-placeholder>
+        <UI-site-placeholder *ngFor="let item of placeholderItem"></UI-site-placeholder>
       </ng-template>
     </div>
   </div>
