@@ -35,18 +35,32 @@
       <a href="#">View all</a>
     </div>
     <div class="offers">
-      <div class="sites" *ngIf="sites;else siteplaceholder">
+      <div class="sites" *ngIf="sites; else siteplaceholder">
         <UI-offer-by-site
           [site]="site"
           *ngFor="let site of sites"
         ></UI-offer-by-site>
       </div>
       <ng-template #siteplaceholder>
-        <UI-site-placeholder *ngFor="let item of placeholderItem"></UI-site-placeholder>
+        <UI-site-placeholder
+          *ngFor="let item of placeholderItem"
+        ></UI-site-placeholder>
       </ng-template>
     </div>
   </div>
   <div class="banners   ">
     <UI-banners></UI-banners>
+  </div>
+  <div class="giftcard">
+    <div class="title">
+      GIFTCARDS
+      <div class="viewall"><a href="#"> View all</a></div>
+    </div>
+    <div class="giftcard-list">
+      <UI-giftcard
+        [giftcard]="giftcard"
+        *ngFor="let giftcard of giftcards"
+      ></UI-giftcard>
+    </div>
   </div>
 </div>

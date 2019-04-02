@@ -1,3 +1,13 @@
-<div class="giftcard-wrapper">
-  
+<div
+  class="giftcard-wrapper amzo-card"
+  [ngStyle]="{'background-color': giftcard.background}"
+>
+  <div class="container ">
+    <div class="details-container">
+      <div class="title">{{ giftcard.title }}</div>
+      <div class="giftcard">gift card</div>
+    </div>
+    <i class="{{giftcard.icon}}"></i>
+  </div>
+  <div class="price"><i class="fas fa-rupee-sign    "></i>{{giftcard.price}}</div>
 </div>

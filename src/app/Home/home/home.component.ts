@@ -8,6 +8,7 @@ import { FetchService } from "../../Service/fetch.service";
 export class HomeComponent implements OnInit {
   items: any;
   sites: any;
+  giftcards: any;
   placeholderItem = [{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}];
   constructor(private fetchService: FetchService) {}
 
@@ -20,5 +21,6 @@ export class HomeComponent implements OnInit {
       console.log(sitesData);
       this.sites = sitesData;
     });
+    this.giftcards = this.fetchService.getGiftcards();
   }
 }

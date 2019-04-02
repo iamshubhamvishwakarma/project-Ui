@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: 'UI-giftcard',
-  templateUrl: './giftcard.component.html',
-  styleUrls: ['./giftcard.component.scss']
+  selector: "UI-giftcard",
+  templateUrl: "./giftcard.component.html",
+  styleUrls: ["./giftcard.component.scss"]
 })
 export class GiftcardComponent implements OnInit {
+  @Input()
+  giftcard;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

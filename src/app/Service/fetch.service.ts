@@ -27,7 +27,58 @@ export class FetchService {
     );
     return req;
   }
-
+  getGiftcards() {
+    return [
+      {
+        title: "amazon.com",
+        price: "5000",
+        background: "#000",
+        icon: "fab fa-amazon"
+      },
+      {
+        title: "ebay.com",
+        price: "5000",
+        background: "#000",
+        icon: "fab fa-ebay"
+      },
+      {
+        title: "amazon.com",
+        price: "5000",
+        background: "#000",
+        icon: "fab fa-amazon"
+      },
+      {
+        title: "amazon.com",
+        price: "5000",
+        background: "#000",
+        icon: "fab fa-amazon"
+      },
+      {
+        title: "amazon.com",
+        price: "5000",
+        background: "#000",
+        icon: "fab fa-amazon"
+      },
+      {
+        title: "amazon.com",
+        price: "5000",
+        background: "#000",
+        icon: "fab fa-amazon"
+      },
+      {
+        title: "amazon.com",
+        price: "5000",
+        background: "#000",
+        icon: "fab fa-amazon"
+      },
+      {
+        title: "amazon.com",
+        price: "5000",
+        background: "#000",
+        icon: "fab fa-amazon"
+      }
+    ];
+  }
   getTempData() {
     let tempItems = [];
 
