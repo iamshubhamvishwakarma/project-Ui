@@ -5,11 +5,13 @@
 .row {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 .column {
   border-left: 1px solid #e9ecef;
   text-align: center;
-  width: 50%;
+  width: 90%;
+  
   padding: 2px;
   
   border-bottom: 1px solid #e9ecef;

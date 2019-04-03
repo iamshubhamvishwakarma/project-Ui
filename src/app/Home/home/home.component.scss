@@ -9,8 +9,9 @@ $padding: 20px;
 .deals-container {
   overflow-x: auto;
   white-space: nowrap;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-left: -39px;
 }
 .deals-container::-webkit-scrollbar {
   display: none;
@@ -25,6 +26,7 @@ $padding: 20px;
   text-decoration: none;
   justify-self: flex-end;
   color: #5495ff;
+  margin-right: 20px;
 }
 
 .categories,
@@ -49,8 +51,9 @@ $padding: 20px;
 .offer-title,
 .title {
   font-size: 15px;
-  margin-left: 60px;
+  margin-left: 20px;
   font-weight: 900;
+  text-decoration: underline;// remove this 
 }
 .follow-us-title {
   margin-left: 60px;
@@ -69,7 +72,7 @@ $padding: 20px;
 }
 .follow-us-holder {
   padding: 10px;
-  margin-bottom: 20px;
+   
 }
 
 .follow-us-items,
@@ -81,6 +84,9 @@ $padding: 20px;
   overflow-y: hidden;
   overflow-x: auto;
   justify-content: center;
+}
+.deals{
+  margin-bottom: 20px;
 }
 .giftcard {
   margin-top: 50px;

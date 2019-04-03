@@ -13,11 +13,11 @@
     <div class="h5">AMAZON</div>
     <div class="h5">AMAZON</div>
   </div>
-  <div class="top-deals">
+  <div class="top-deals amzo-card">
     <ul class="deals-container">
       <div class="deal-label ">
-        <div class="title font-weight-bold">HOT DEALS</div>
-        <a href="#">View all</a>
+        <div class="title font-weight-bold">TODAY'S DEALS</div>
+        <a [routerLink]="['/deals']">View all</a>
       </div>
       <UI-item-holder [items]="items"></UI-item-holder>
     </ul>
@@ -26,13 +26,24 @@
     <!-- <div class="follow-us-title">Get Price Drop deals</div> -->
     <UI-social-options></UI-social-options>
   </div>
+
+  <div class="deals amzo-card">
+    <ul class="deals-container">
+      <div class="deal-label ">
+        <div class="title font-weight-bold">Tranding Price drop</div>
+        <a [routerLink]="['/deals']">View all</a>
+      </div>
+      <UI-item-holder [items]="items"></UI-item-holder>
+    </ul>
+  </div>
+
   <div class="category">
     <UI-category></UI-category>
   </div>
   <div class="offer-by-site-container">
     <div class="offer-title">
-      OFFER BY SITES
-      <a href="#">View all</a>
+      OFFER BY SITES router
+      <a [routerLink]="['/sites']">View all</a>
     </div>
     <div class="offers">
       <div class="sites" *ngIf="sites; else siteplaceholder">
@@ -54,7 +65,7 @@
   <div class="giftcard">
     <div class="title">
       GIFTCARDS
-      <div class="viewall"><a href="#"> View all</a></div>
+      <div class="viewall"><a [routerLink]="['/giftcard']"> View all</a></div>
     </div>
     <div class="giftcard-list">
       <UI-giftcard

@@ -1,12 +1,12 @@
 <div class="category-wrapper advance-card">
   <div class="searchbox advance-card">
     Offer by category
-    <a href="#">View all</a>
+    <a href="/categories">View all</a>
   </div>
   <div class="category-grid">
     <div class="grid-item" *ngFor="let griditem of categories">
       <div class="item-icon">
-        <i class="{{ griditem.icon }}" aria-hidden="true"></i>
+        <i class="{{ griditem.icon }}" [ngStyle]="{'color': griditem.color}" aria-hidden="true"></i>
       </div>
       <div class="item-title">{{ griditem.title }}</div>
     </div>

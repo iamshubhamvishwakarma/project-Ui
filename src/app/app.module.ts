@@ -22,19 +22,22 @@ import { ItemComponent } from "./Deals/item/item.component";
 import { NavBarComponent } from "./Shared/nav-bar/nav-bar.component";
 import { ItemHolderComponent } from "./Deals/item-holder/item-holder.component";
 import { FindScrollDirective } from "./Directive/find-scroll.directive";
-import { ProductGridComponent } from './ProductDisplay/product-grid/product-grid.component';
-import { ProductListComponent } from './ProductDisplay/product-list/product-list.component';
-import { ProductListItemComponent } from './ProductDisplay/product-list-item/product-list-item.component';
-import { ProductGridItemComponent } from './ProductDisplay/product-grid-item/product-grid-item.component';
-import { ProductHolderComponent } from './ProductDisplay/product-holder/product-holder.component';
-import { ItemPlaceholderComponent } from './Shared/item-placeholder/item-placeholder.component';
-import { OfferBySiteComponent } from './Deals/offer-by-site/offer-by-site.component';
-import { SocialOptionsComponent } from './Home/social-options/social-options.component';
-import { SitePlaceholderComponent } from './Shared/site-placeholder/site-placeholder.component';
-import { BannersComponent } from './Home/banners/banners.component';
-import { CategoryComponent } from './Home/category/category.component';
-import { GiftcardComponent } from './Home/giftcard/giftcard.component';
-
+import { ProductGridComponent } from "./ProductDisplay/product-grid/product-grid.component";
+import { ProductListComponent } from "./ProductDisplay/product-list/product-list.component";
+import { ProductListItemComponent } from "./ProductDisplay/product-list-item/product-list-item.component";
+import { ProductGridItemComponent } from "./ProductDisplay/product-grid-item/product-grid-item.component";
+import { ProductHolderComponent } from "./ProductDisplay/product-holder/product-holder.component";
+import { ItemPlaceholderComponent } from "./Shared/item-placeholder/item-placeholder.component";
+import { OfferBySiteComponent } from "./Deals/offer-by-site/offer-by-site.component";
+import { SocialOptionsComponent } from "./Home/social-options/social-options.component";
+import { SitePlaceholderComponent } from "./Shared/site-placeholder/site-placeholder.component";
+import { BannersComponent } from "./Home/banners/banners.component";
+import { CategoryComponent } from "./Home/category/category.component";
+import { GiftcardComponent } from "./Home/giftcard/giftcard.component";
+import { DealsComponent } from "./ViewAll/deals/deals.component";
+import { SitesComponent } from "./ViewAll/sites/sites.component";
+import { CategoriesComponent } from "./ViewAll/categories/categories.component";
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,14 +69,18 @@ import { GiftcardComponent } from './Home/giftcard/giftcard.component';
     SitePlaceholderComponent,
     BannersComponent,
     CategoryComponent,
-    GiftcardComponent
+    GiftcardComponent,
+    DealsComponent,
+    SitesComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

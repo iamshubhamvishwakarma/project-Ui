@@ -1,6 +1,7 @@
 .deal-wrapper {
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 .item-holder {
@@ -11,7 +12,7 @@
   overflow-y: hidden;
 }
 .item-holder::-webkit-scrollbar {
-  display: none;
+  //display: none;
 }
 .more-button {
   width: 50px;
