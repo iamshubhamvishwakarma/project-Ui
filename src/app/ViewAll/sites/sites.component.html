@@ -1,3 +1,32 @@
-<p>
-  sites works!
-</p>
+<div class="all-sites">
+  <div class="amzo-card">
+    <div class="heading advance-card">
+      <div class="title">ALL SITES</div>
+      <div class="searchbox">
+        <input
+          type="text"
+          name="search"
+          placeholder="Type Something"
+          id="search"
+          [(ngModel)]="query"
+          (input)="searching()"
+        />
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="sites" *ngIf="sites; else siteplaceholder">
+        <UI-offer-by-site
+          [site]="site"
+          *ngFor="let site of sites"
+        ></UI-offer-by-site>
+      </div>
+      <ng-template #siteplaceholder>
+        <div class="sites">
+          <UI-site-placeholder
+            *ngFor="let item of placeholderItem"
+          ></UI-site-placeholder>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

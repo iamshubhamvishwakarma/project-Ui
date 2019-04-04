@@ -13,7 +13,7 @@ export class FetchService {
 
   getItems(params?) {
     if (!params) {
-      this.apiUrl = "http://www.mocky.io/v2/5c6a96cd330000ab187f4bd6";
+      this.apiUrl = "http://localhost:3000/api/todays-deal";
     } else {
       this.apiUrl = params;
     }
@@ -23,7 +23,7 @@ export class FetchService {
 
   getSites() {
     let req = this.httpClient.get(
-      "http://www.mocky.io/v2/5c9cb6d433000011003f202c"
+      "http://localhost:3000/api/sites"
     );
     return req;
   }

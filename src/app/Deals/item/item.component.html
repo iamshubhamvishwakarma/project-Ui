@@ -1,13 +1,14 @@
 <li class="">
   <div class="card">
-    <img src="{{ item.image }}" alt="{{ item.name }}"  />
+    <img src="{{ item.image }}" alt="{{ item.name }}" />
     <div class="container">
       <h4>
-        <b>{{ item.name }}</b>
+        <b class="item-name">{{ item.name }}</b>
       </h4>
-       
-      <p>{{ item.price }}</p>
-      <p>{{ item.source }}</p>
+      <div class="details">
+        <p class="item-price">₹ {{ item.price }}</p>
+        <p class="item-source"> {{ item.source }}</p>
+      </div>
     </div>
   </div>
 </li>

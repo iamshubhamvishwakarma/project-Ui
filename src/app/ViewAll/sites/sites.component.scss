@@ -1,0 +1,49 @@
+.all-sites {
+  margin: 30px 30px 30px 30px;
+}
+
+.heading {
+  height: 40px;
+  position: sticky;
+  top: 50px;
+  -webkit-position: sticky;
+  background: #5495ff;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  padding-left: 20px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.title,
+.searchbox {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.searchbox {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.searchbox input {
+  width: 250px;
+  height: 27px;
+  border-radius: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+.content-wrapper {
+  padding: 10px;
+}
+.sites {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}

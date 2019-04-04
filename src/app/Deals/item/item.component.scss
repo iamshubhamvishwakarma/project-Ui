@@ -28,5 +28,21 @@ li {
 
 .container {
   padding: 2px 16px;
+  overflow: hidden;
   background: #e9ecef;
+}
+.details {
+  display: flex;
+  justify-content: flex-end;
+}
+.item-price {
+  margin-right: auto;
+  font-weight: 900;
+  color: #5495ff;
+}
+.item-source {
+  text-transform: uppercase;
+  justify-self: flex-end;
+  font-weight: 900;
+  color: #c3c3c3;
 }

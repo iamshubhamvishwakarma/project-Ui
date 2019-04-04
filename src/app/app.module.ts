@@ -37,7 +37,6 @@ import { GiftcardComponent } from "./Home/giftcard/giftcard.component";
 import { DealsComponent } from "./ViewAll/deals/deals.component";
 import { SitesComponent } from "./ViewAll/sites/sites.component";
 import { CategoriesComponent } from "./ViewAll/categories/categories.component";
- 
 @NgModule({
   declarations: [
     AppComponent,
