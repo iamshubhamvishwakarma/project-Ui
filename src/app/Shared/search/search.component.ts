@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { trigger, transition, style, animate } from "@angular/Animations";
-
+import { Router } from "@angular/router";
 @Component({
   selector: "UI-search",
   templateUrl: "./search.component.html",
@@ -9,7 +8,8 @@ import { trigger, transition, style, animate } from "@angular/Animations";
 export class SearchComponent implements OnInit {
   @Input()
   isSolidNavbar;
-  constructor() {}
+  searchString = "";
+  constructor(private router: Router) {}
   isFocused = false;
   historys: any = [];
   ngOnInit() {
@@ -24,6 +24,16 @@ export class SearchComponent implements OnInit {
   }
   hadFocus($event) {
     this.isFocused = false;
-    console.log(this.isFocused);
+    console.log(this.searchString);
+  }
+  search() {
+    console.log(this.searchString);
+    if (this.searchString.length < 3) {
+      return;
+    }
+    
+    this.router.navigate(["/search"], {
+      queryParams: { query: encodeURI(this.searchString) }
+    });
   }
 }

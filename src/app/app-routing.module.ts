@@ -11,7 +11,7 @@ import { DealsComponent } from "./ViewAll/deals/deals.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "search/:query", component: ProductHolderComponent }, 
+  { path: "search", component: ProductHolderComponent }, 
   { path: "search/sites/:id", component: ProductHolderComponent }, 
   { path: "home", component: HomeComponent },
   { path: "deals", component: DealsComponent },

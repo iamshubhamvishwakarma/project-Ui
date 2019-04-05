@@ -1,10 +1,17 @@
 <!--<div class="search-wrapper">
    <input type="search" id="search" class="search-box" autocomplete>
  </div>-->
+
 <div class="search-wrapper ">
-  <div class="search-box " [ngClass]="{'search-box-card': !isSolidNavbar, 'border-search': isSolidNavbar}">
+  <div
+    class="search-box "
+    [ngClass]="{
+      'search-box-card': !isSolidNavbar,
+      'border-search': isSolidNavbar
+    }"
+  >
     <div class="auto-complete">
-      <span class="icon"><i class="fa fa-search"></i></span>
+      <span class="icon"><i class="fa fa-microphone"></i></span>
       <input
         class="input-filed"
         type="search"
@@ -13,22 +20,23 @@
         (focusout)="hadFocus($event)"
         autocomplete="true"
         placeholder="Search..."
+        [(ngModel)]="searchString"
       />
-      <span class="icon"><i class="fa fa-microphone"></i></span>
+      <span class="icon" (click)="search()"><i class="fa fa-search"></i></span>
     </div>
     <span class="middle-line"></span>
     <div
       class="search-history-tranding"
       [ngStyle]="{ display: isFocused ? 'block' : 'none' }"
     >
-    <div class="search-history-wrappper">
-    <div class="middle-line"></div>
-      <div class="history" *ngFor="let history of historys">
-        <span class="history-icon"
-          ><i class="fa fa-history" aria-hidden="true"></i></span
-        >{{ history }}
+      <div class="search-history-wrappper">
+        <div class="middle-line"></div>
+        <div class="history" *ngFor="let history of historys">
+          <span class="history-icon"
+            ><i class="fa fa-history" aria-hidden="true"></i></span
+          >{{ history }}
+        </div>
       </div>
-    </div>
     </div>
   </div>
 </div>
