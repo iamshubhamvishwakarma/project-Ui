@@ -8,7 +8,7 @@ export class FilterPipe implements PipeTransform {
     if (!searchText) return items;
     searchText = searchText.toLowerCase();
     return items.filter(it => {
-      var l= it.message.toLowerCase().includes(searchText);
+      var l= it.name.toLowerCase().includes(searchText);
       console.log(l);
       return l;
     });

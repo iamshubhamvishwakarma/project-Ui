@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-
+import {Router} from '@angular/router'
 @Component({
   selector: "UI-offer-by-site",
   templateUrl: "./offer-by-site.component.html",
@@ -8,7 +8,8 @@ import { Component, OnInit, Input } from "@angular/core";
 export class OfferBySiteComponent implements OnInit {
   @Input()
   site;
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {}
+   
 }

@@ -17,7 +17,7 @@
       <div class="sites" *ngIf="sites; else siteplaceholder">
         <UI-offer-by-site
           [site]="site"
-          *ngFor="let site of sites"
+          *ngFor="let site of (sites | filter: query)"
         ></UI-offer-by-site>
       </div>
       <ng-template #siteplaceholder>
@@ -28,5 +28,6 @@
         </div>
       </ng-template>
     </div>
+    <p class="addmore">Something we are missing <a href="#">Click Here</a> to add</p>
   </div>
 </div>

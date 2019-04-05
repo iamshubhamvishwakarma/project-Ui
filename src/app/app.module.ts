@@ -71,7 +71,8 @@ import { CategoriesComponent } from "./ViewAll/categories/categories.component";
     GiftcardComponent,
     DealsComponent,
     SitesComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    
   ],
   imports: [
     BrowserModule,

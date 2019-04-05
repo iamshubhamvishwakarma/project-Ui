@@ -11,7 +11,8 @@ import { DealsComponent } from "./ViewAll/deals/deals.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "search", component: ProductHolderComponent }, //add search in double cots
+  { path: "search/:query", component: ProductHolderComponent }, 
+  { path: "search/sites/:id", component: ProductHolderComponent }, 
   { path: "home", component: HomeComponent },
   { path: "deals", component: DealsComponent },
   { path: "sites", component: SitesComponent },
@@ -21,7 +22,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
