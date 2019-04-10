@@ -1,7 +1,9 @@
 var express = require("express");
-var cors = require('cors')
+var cors = require("cors");
 var app = express();
-app.use(cors())
+const Search = require("./Search.js");
+app.use(cors());
+search = new Search();
 app.get("/api/sites", (req, res) => {
   let sites = [
     {
@@ -484,6 +486,11 @@ app.get("/api/giftcard", (req, res) => {
   ];
   res.setHeader("Content-Type", "application/json");
   res.end(JSON.stringify(giftcards));
+});
+app.get("/api/search", (req, res) => {
+  search.getResult(response => {
+    res.send(response);
+  });
 });
 
 app.listen(3000);

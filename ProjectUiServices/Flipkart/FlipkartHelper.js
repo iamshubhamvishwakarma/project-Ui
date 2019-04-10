@@ -29,7 +29,7 @@ module.exports = class FlipkartHelper {
         console.log("error", error);
       });
       res.on("end", () => {
-        console.log(responseStr);
+       // console.log(responseStr);
         callback(responseStr);
       });
     });
