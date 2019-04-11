@@ -23,7 +23,7 @@ export class ProductHolderComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.data = this.route.snapshot.data;
+    this.data = this.route.snapshot.data.message;
     console.log(this.data);
   }
   filterList($event, index: number) {

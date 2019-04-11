@@ -1,6 +1,6 @@
  
 <div class="item-wrapper" (click)="openLink(item)">
-    <div *ngIf="item.offer" class="offer">{{item.offer}}</div>
+    <div *ngIf="item.offer" class="offer">{{item.discountPercentage}}</div>
   <div class="item-image">
     <img src="{{ item.image }}" alt="item.name" />
   </div>
@@ -8,9 +8,9 @@
   <div class="item-details">
     <div class="details-left">
       <div class="item-name">
-        {{ item.name }}
+        {{ item.title }}
       </div>
-      <div class="item-price"><span>&#x20B9;</span> {{ item.price }}</div>
+      <div class="item-price"><span>&#x20B9;</span> {{ item.offerPrice }}</div>
     </div>
     <div class="details-right">
       <div class="source">{{ item.source }}</div>
