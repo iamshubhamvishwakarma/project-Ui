@@ -4,9 +4,11 @@
   flex-flow: row;
   border-bottom: 1px solid #dde1e3;
   align-items: center;
+  cursor: pointer;
 }
 .item-image {
   padding: 20px 20px 10px 50px;
+   
 }
 .item-image img {
   width: 100px;
@@ -33,6 +35,14 @@
   color: #5495ff;
   font-size: 15px;
 }
+.new-price {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.old-price {
+  color: #909090;
+  text-decoration-line: line-through;
+}
 .right-option-wrapper {
   margin-left: 45px;
 }
@@ -45,7 +55,7 @@
 .item-price,
 .copy,
 .share {
-  margin-left: 10px;
+  margin-left: 20px;
   margin-right: 10px;
   padding: 5px;
 }
@@ -53,16 +63,18 @@
   display: inline-table;
   background: #000;
   color: #fff;
+  padding: 7px;
 }
 .buy-button {
   margin-left: 40px;
+  height:40px;
   padding: 10px 20px 10px 20px;
   border-radius: 20px;
   border: 1px solid #dde1e3;
 }
 .item-wrapper:hover {
   border-bottom: 2px solid rgb(255, 194, 41);
-} 
+}
 .item-wrapper:hover .buy-button {
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
   background-color: #5495ff;

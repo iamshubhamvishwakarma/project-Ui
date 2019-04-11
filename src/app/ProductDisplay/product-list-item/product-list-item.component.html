@@ -3,17 +3,23 @@
     <img src="{{ item.image }}" alt="{{ item.name }}" />
   </div>
   <div class="item-details">
-    <div class="item-name">{{ item.name }}</div>
+    <div class="item-name">{{ item.title }}</div>
     <div class="item-category">{{ item.source }}</div>
   </div>
   <div class="right-option-wrapper">
     <div class="options">
-      <div class="item-price">₹ {{ item.price }}</div>
-      <div class="offer">{{ item.offer }}</div>
+      <div class="item-price">
+          <div class="new-price">₹ {{ item.offerPrice }}</div>
+        <div class="old-price">₹ {{ item.price }}</div>
+        
+      </div>
+      <div class="offer">-{{ item.discountPercentage }}</div>
       <div class="copy"><i class="fa fa-clipboard" aria-hidden="true"></i></div>
-      <div class="like"><i class="fa fa-heart-o" aria-hidden="true"></i></div>
-      <div class="share"><i class="fa fa-share-alt" aria-hidden="true"></i></div>
-      <div class="buy-button ripple" >Buy Now</div>
+      <div class="like"><i class="far fa-heart"></i></div>
+      <div class="share">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </div>
+      <div class="buy-button ripple">Buy Now</div>
     </div>
   </div>
 </div>
