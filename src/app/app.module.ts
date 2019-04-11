@@ -37,6 +37,7 @@ import { GiftcardComponent } from "./Home/giftcard/giftcard.component";
 import { DealsComponent } from "./ViewAll/deals/deals.component";
 import { SitesComponent } from "./ViewAll/sites/sites.component";
 import { CategoriesComponent } from "./ViewAll/categories/categories.component";
+import { SearchResolver } from "./Service/search.resolver";
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,16 +72,14 @@ import { CategoriesComponent } from "./ViewAll/categories/categories.component";
     GiftcardComponent,
     DealsComponent,
     SitesComponent,
-    CategoriesComponent,
-    
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule,
-   
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

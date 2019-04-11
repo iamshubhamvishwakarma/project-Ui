@@ -1,6 +1,6 @@
 var OperationHelper = require("apac").OperationHelper;
 const FkHelper = require("./Flipkart/FlipkartHelper.js");
-
+const fs = require("fs");
 module.exports = class SearchHelper {
   constructor(props) {
     //Amazon
@@ -17,17 +17,21 @@ module.exports = class SearchHelper {
     });
   }
 
-  getResult(callback) {
-    this.callApi().then(totalResponse => {
-      console.log(totalResponse);
-      callback(totalResponse);
-    });
+  getResult(userQuery, callback) {
+    let rawdata = fs.readFileSync("./dummydata/data.json");
+    let student = JSON.parse(rawdata);
+    callback(student);
+    
+    // this.callApi(userQuery).then(totalResponse => {
+    //   console.log(totalResponse);
+    //   callback(totalResponse);
+    // });
   }
 
-  callApi() {
+  callApi(userQuery) {
     return new Promise(resolve => {
-      this.getFlipkartResult().then(flipkartResponse => {
-        this.getAmazonResult().then(amazonResponse => {
+      this.getFlipkartResult(userQuery).then(flipkartResponse => {
+        this.getAmazonResult(userQuery).then(amazonResponse => {
           this.combineResult(flipkartResponse, amazonResponse).then(
             allResponse => {
               resolve(allResponse);
@@ -43,40 +47,54 @@ module.exports = class SearchHelper {
       var azObject = [];
       var fk = JSON.parse(fkResponse);
 
-      var az = JSON.parse(JSON.stringify(azResponse));
-      fk.products.forEach(element => {
-        var ele = {
-          title: element.productBaseInfoV1.title,
-          price: element.productBaseInfoV1.maximumRetailPrice.amount,
-          image: element.productBaseInfoV1.imageUrls["200x200"],
-          offerPrice: element.productBaseInfoV1.flipkartSpecialPrice.amount,
-          productUrl: element.productBaseInfoV1.productUrl,
-          discountPercentage: element.productBaseInfoV1.discountPercentage
-        };
-        az.ItemSearchResponse.Items.Item.forEach(azElement => {
-          var azEle = {
-            title: element.ItemAttributes.ListPrice.Title,
-            price: element.ItemAttributes.ListPrice.FormattedPrice,
+      if (fk) {
+        fk.products.forEach(element => {
+          var ele = {
+            id: element.productBaseInfoV1.productId,
+            title: element.productBaseInfoV1.title,
+            price: element.productBaseInfoV1.maximumRetailPrice.amount,
             image: element.productBaseInfoV1.imageUrls["200x200"],
-            offerPrice: element.ItemAttributes.OfferSummary.LowestNewPrice.FormattedPrice,
-            productUrl: element.DetailPageURL,
-            discountPercentage: element.ItemAttributes.Offers.Offer.OfferListing.PercentageSaved
+            offerPrice: element.productBaseInfoV1.flipkartSpecialPrice.amount,
+            productUrl: element.productBaseInfoV1.productUrl,
+            discountPercentage: element.productBaseInfoV1.discountPercentage
           };
+
+          fkObject.push(ele);
         });
-        fkObject.push(ele);
-      });
-      resolve();
+      }
+      console.log(azResponse);
+      console.log(fkResponse);
+      if (azResponse) {
+        azResponse.ItemSearchResponse.Items.Item.forEach(element => {
+          var azEle = {
+            title: element.ItemAttributes.Title,
+            price: element.ItemAttributes.ListPrice.FormattedPrice,
+            image: element.MediumImage.URL,
+            offerPrice: element.OfferSummary.LowestNewPrice.FormattedPrice,
+            productUrl: element.DetailPageURL,
+            discountPercentage:
+              element.Offers.TotalOffers > 0
+                ? element.Offers.Offer.OfferListing.PercentageSaved
+                : 0
+          };
+          azObject.push(azEle);
+        });
+      }
+      if (azObject.length !== 0 || fkObject.length !== 0) {
+        const allObj = azObject.concat(fkObject);
+        resolve(allObj);
+      }
     });
   }
 
-  getAmazonResult() {
+  getAmazonResult(userQuery) {
     return new Promise(resolve => {
       this.opHelper.execute(
         "ItemSearch",
         {
           SearchIndex: "All",
-          Keywords: "asus zenfone",
-          ResponseGroup: "ItemAttributes,Offers"
+          Keywords: userQuery,
+          ResponseGroup: "ItemAttributes,Offers,Images"
         },
         function(err, results) {
           resolve(results);
@@ -84,9 +102,9 @@ module.exports = class SearchHelper {
       );
     });
   }
-  getFlipkartResult() {
+  getFlipkartResult(userQuery) {
     return new Promise(resolve => {
-      this.flipkart.execute("ItemSearch", { query: "asus" }, response => {
+      this.flipkart.execute("ItemSearch", { query: userQuery }, response => {
         resolve(response);
       });
     });

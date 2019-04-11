@@ -1,6 +1,5 @@
 import { Component, OnInit } from "@angular/core";
 import { FetchService } from "src/app/Service/fetch.service";
-import { query } from "@angular/Animations";
 
 @Component({
   selector: "UI-sites",

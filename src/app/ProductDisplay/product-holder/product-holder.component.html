@@ -103,10 +103,10 @@
       </div>
       <div class="product-container">
         <ng-container *ngIf="isDisplayMode; else elseTemplate">
-          <UI-product-grid  ></UI-product-grid>
+          <UI-product-grid [items]="data" ></UI-product-grid>
         </ng-container>
         <ng-template #elseTemplate>
-          <UI-product-list  ></UI-product-list>
+          <UI-product-list  [items]="data"></UI-product-list>
         </ng-template>
         
       </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "UI-product-holder",
@@ -17,10 +18,14 @@ export class ProductHolderComponent implements OnInit {
     { title: "Casual", quantity: "14" }
   ];
   filterBrandList = [];
+  data: any;
   isDisplayMode = false; // true if grid else list
-  constructor() {}
+  constructor(private route: ActivatedRoute) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.data = this.route.snapshot.data;
+    console.log(this.data);
+  }
   filterList($event, index: number) {
     if ($event.srcElement.checked) {
       this.filterBrandList.push($event.target.value);

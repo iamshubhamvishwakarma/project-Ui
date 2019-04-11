@@ -488,9 +488,16 @@ app.get("/api/giftcard", (req, res) => {
   res.end(JSON.stringify(giftcards));
 });
 app.get("/api/search", (req, res) => {
-  search.getResult(response => {
-    res.send(response);
-  });
+  if (!req.query.query || req.query.query === "") {
+    res.send("{request:invalid}");
+  } else {
+    userQuery = req.query.query;
+    search.getResult(userQuery, response => {
+      res.send(response);
+    });
+  }
 });
-
+app.get("*", (req, res) => {
+  res.json("{'request':'invalid request or url'}");
+});
 app.listen(3000);

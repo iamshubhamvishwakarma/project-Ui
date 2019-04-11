@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 import { FetchService } from "src/app/Service/fetch.service";
 
 @Component({
@@ -7,10 +7,11 @@ import { FetchService } from "src/app/Service/fetch.service";
   styleUrls: ["./product-grid.component.scss"]
 })
 export class ProductGridComponent implements OnInit {
-  items = [];
+  @Input()
+  items;
   constructor(private fatchService: FetchService) {}
 
   ngOnInit() {
-    this.items = this.fatchService.getTempData();
+    //this.items = this.fatchService.getTempData();
   }
 }

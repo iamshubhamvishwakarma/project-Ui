@@ -8,11 +8,16 @@ import { WishlistComponent } from "./Home/wishlist/wishlist.component";
 import { ProductHolderComponent } from "./ProductDisplay/product-holder/product-holder.component";
 import { SitesComponent } from "./ViewAll/sites/sites.component";
 import { DealsComponent } from "./ViewAll/deals/deals.component";
+import { SearchResolver } from "./Service/search.resolver";
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
-  { path: "search", component: ProductHolderComponent }, 
-  { path: "search/sites/:id", component: ProductHolderComponent }, 
+  {
+    path: "search",
+    component: ProductHolderComponent,
+    resolve: { message: SearchResolver }
+  },
+  { path: "search/sites/:id", component: ProductHolderComponent },
   { path: "home", component: HomeComponent },
   { path: "deals", component: DealsComponent },
   { path: "sites", component: SitesComponent },
@@ -22,7 +27,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, { scrollPositionRestoration: "enabled" })
+  ],
+  exports: [RouterModule],
+  providers: [SearchResolver]
 })
 export class AppRoutingModule {}
