@@ -19,7 +19,7 @@ export class ProductHolderComponent implements OnInit {
   ];
   filterBrandList = [];
   data: any;
-  isDisplayMode = false; // true if grid else list
+  isDisplayMode = true; // true if grid else list
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {

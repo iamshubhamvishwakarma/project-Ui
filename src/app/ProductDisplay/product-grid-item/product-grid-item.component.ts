@@ -10,9 +10,11 @@ export class ProductGridItemComponent implements OnInit {
   @Input() item;
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.item);
+  }
   openLink(item) {
-    console.log(item.name, item.url); // call service to registar
-    window.open(item.url, "_blank"); //need to check how to navigate properly this is temprory
+    console.log(item.name, item.productUrl); // call service to registar
+    window.open(item.productUrl, "_blank"); //need to check how to navigate properly this is temprory
   }
 }

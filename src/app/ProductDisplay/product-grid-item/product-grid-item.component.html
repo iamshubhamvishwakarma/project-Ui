@@ -1,23 +1,31 @@
- 
-<div class="item-wrapper" (click)="openLink(item)">
-    <div *ngIf="item.offer" class="offer">{{item.discountPercentage}}</div>
+<div class="item-wrapper" >
+  <div class="like"><i class="far fa-heart"></i></div>
+  <div class="offer">- {{ item.discountPercentage }} %</div>
   <div class="item-image">
-    <img src="{{ item.image }}" alt="item.name" />
+    <img src="{{ item.image }}" alt="item.name" (click)="openLink(item)"/>
   </div>
-  
   <div class="item-details">
     <div class="details-left">
       <div class="item-name">
         {{ item.title }}
       </div>
-      <div class="item-price"><span>&#x20B9;</span> {{ item.offerPrice }}</div>
+      <div class="item-price">
+        <span>&#x20B9;</span> {{ item.offerPrice }}
+        <span class="old-price">&#x20B9;{{ item.price }}</span>
+      </div>
     </div>
     <div class="details-right">
       <div class="source">{{ item.source }}</div>
     </div>
   </div>
-</div>
-<div class="hidden-content-wrapper">
-  <div class="amzo-card">Visit</div>
+  <div class="bottom-bar">
+    <div class="element-container">
+      <div class="copy"><i class="far fa-copy"></i></div>
 
+      <div class="share">
+        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      </div>
+      <div class="buy-button ripple" (click)="openLink(item)">Buy Now</div>
+    </div>
+  </div>
 </div>

@@ -1,35 +1,40 @@
-$color-primary: #5495ff;
+$color-primary: rgb(81, 148, 255);
 
 .item-wrapper {
   width: 100%;
+  position: relative;
+  height: 330px;
+  overflow: hidden;
   padding: 10px;
-  border-right: 1px solid #dde1e3;
-  border-bottom: 1px solid #dde1e3;
+  display: flex;
+  flex-direction: column;
+  border: 0.5px solid #dde1e3;
 }
-.item-wrapper:hover {
-  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
-  border-color: rgba(223, 225, 229, 0);
-}
+
 .item-image {
   width: 100%;
   display: flex;
-    justify-content: center;
+  justify-content: center;
   align-items: flex-start;
   text-align: center;
 }
 .item-image img {
   height: 450px;
-  padding:10px;
+  padding: 10px;
   height: auto;
 }
 .item-name {
-  font-weight: 900;
+  font-weight: 500;
   font-size: 15px;
+  width: 292px;
   margin-bottom: 5px;
   text-transform: capitalize;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .item-details {
-  margin-left: 20px;
+  margin-top: auto;
   padding: 5px;
   margin-bottom: 5px;
   display: flex;
@@ -47,17 +52,63 @@ $color-primary: #5495ff;
   flex-direction: column-reverse;
 }
 .source {
-  font-weight: 700;
-  color: #e4e4e4f5;
+  font-weight: 900;
   letter-spacing: 2px;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(rgb(133, 133, 133), #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .hidden-content-wrapper {
   display: none;
 }
 .offer {
-  float: right;
+  position: absolute;
   padding: 2px;
+  right: 0;
+  padding: 5px;
   margin: 5px;
   background: #000;
   color: #fff;
+}
+
+.old-price {
+  margin-left: 10px;
+  color: #909090;
+  text-decoration-line: line-through;
+  font-weight: 500;
+}
+.bottom-bar {
+  height: 30px;
+}
+.element-container {
+  display: flex;
+}
+.offer,
+.like,
+.item-price,
+.copy,
+.share {
+  margin-right: 10px;
+  padding: 5px;
+}
+.like {
+  font-size: 18px;
+  position: absolute;
+}
+.buy-button {
+  cursor: pointer;
+  height: 30px;
+  position: absolute;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px 10px 5px 10px;
+  border-radius: 20px;
+  border: 1px solid #dde1e3;
+  background-color: #5495ff;
+  color: #fff;
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
 }

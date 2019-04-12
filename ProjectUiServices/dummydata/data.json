@@ -1,5 +1,6 @@
 [
   {
+    "source": "amazon",
     "title": "Redmi 6 Pro (Gold, 4GB RAM, 64GB Storage)",
     "price": "INR 13,499.00",
     "image": "https://images-eu.ssl-images-amazon.com/images/I/41u1jXreMQL._SL160_.jpg",
@@ -8,6 +9,7 @@
     "discountPercentage": "26"
   },
   {
+    "source": "amazon",
     "title": "Redmi Note 5 Pro (Red, 4GB RAM, 64GB Storage)",
     "price": "INR 15,999.00",
     "image": "https://images-eu.ssl-images-amazon.com/images/I/41X-iNJvJFL._SL160_.jpg",
@@ -16,6 +18,7 @@
     "discountPercentage": "20"
   },
   {
+    "source": "amazon",
     "title": "Lenovo K8 Note (Venom Black, 4GB RAM, 64GB Storage) System Update",
     "price": "INR 14,999.00",
     "image": "https://images-eu.ssl-images-amazon.com/images/I/51uPEbFR5HL._SL160_.jpg",
@@ -24,6 +27,7 @@
     "discountPercentage": "35"
   },
   {
+    "source": "amazon",
     "title": "Samsung Guru 1200 (GT-E1200, Black)",
     "price": "INR 1,410.00",
     "image": "https://images-eu.ssl-images-amazon.com/images/I/41SRjNS17HL._SL160_.jpg",
@@ -32,6 +36,7 @@
     "discountPercentage": "22"
   },
   {
+    "source": "amazon",
     "title": "Samsung Guru Music 2 SM-B310E (White)",
     "price": "INR 1,950.00",
     "image": "https://images-eu.ssl-images-amazon.com/images/I/41KZie9NJSL._SL160_.jpg",
@@ -40,6 +45,7 @@
     "discountPercentage": "17"
   },
   {
+    "source": "amazon",
     "title": "Redmi 6 Pro (Black, 4GB RAM, 64GB Storage)",
     "price": "INR 13,499.00",
     "image": "https://images-eu.ssl-images-amazon.com/images/I/41Jy18-CakL._SL160_.jpg",
@@ -48,6 +54,7 @@
     "discountPercentage": "26"
   },
   {
+    "source": "amazon",
     "title": "Redmi 6 Pro (Black, 3GB RAM, 32GB Storage)",
     "price": "INR 11,499.00",
     "image": "https://images-eu.ssl-images-amazon.com/images/I/41Jy18-CakL._SL160_.jpg",
@@ -56,6 +63,7 @@
     "discountPercentage": "30"
   },
   {
+    "source": "amazon",
     "title": "Samsung Galaxy M10 (Ocean Blue, 3+32GB)",
     "price": "INR 9,290.00",
     "image": "https://images-eu.ssl-images-amazon.com/images/I/41VGdIwoCRL._SL160_.jpg",
@@ -64,6 +72,7 @@
     "discountPercentage": "3"
   },
   {
+    "source": "amazon",
     "title": "OnePlus 6T (Mirror Black, 6GB RAM, 128GB Storage)",
     "price": "INR 37,999.00",
     "image": "https://images-eu.ssl-images-amazon.com/images/I/41fBRgy0ipL._SL160_.jpg",
@@ -72,6 +81,7 @@
     "discountPercentage": "8"
   },
   {
+    "source": "amazon",
     "title": "Nokia 105 (Black)",
     "price": "INR 1,199.00",
     "image": "https://images-eu.ssl-images-amazon.com/images/I/41gYdatbC4L._SL160_.jpg",
@@ -80,6 +90,7 @@
     "discountPercentage": "13"
   },
   {
+    "source": "flipkart",
     "id": "MOBFE68WZM7UFMDA",
     "title": "Realme 3 (Dynamic Black, 32 GB)(3 GB RAM)",
     "price": 10999,
@@ -89,6 +100,7 @@
     "discountPercentage": 18
   },
   {
+    "source": "flipkart",
     "id": "MOBFE68WEPGFF2TV",
     "title": "Realme 3 (Dynamic Black, 64 GB)(4 GB RAM)",
     "price": 12999,
@@ -98,6 +110,7 @@
     "discountPercentage": 15
   },
   {
+    "source": "flipkart",
     "id": "MOBF3T87HMFBVGHX",
     "title": "Honor 7A (Blue, 32 GB)(3 GB RAM)",
     "price": 10999,
@@ -107,6 +120,7 @@
     "discountPercentage": 36
   },
   {
+    "source": "flipkart",
     "id": "MOBFDXZ3HJJZH3GG",
     "title": "Redmi Note 7 (Sapphire Blue, 64 GB)(4 GB RAM)",
     "price": 14999,
@@ -116,6 +130,7 @@
     "discountPercentage": 20
   },
   {
+    "source": "flipkart",
     "id": "MOBFAJB4CWKAZGPZ",
     "title": "Redmi Note 6 Pro (Black, 64 GB)(4 GB RAM)",
     "price": 15999,
