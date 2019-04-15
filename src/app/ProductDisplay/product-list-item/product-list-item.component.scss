@@ -11,8 +11,8 @@
    
 }
 .item-image img {
-  width: 100px;
-  height: auto;
+  width: auto;
+  height: 100px;
 }
 .item-details {
   display: flex;
@@ -34,6 +34,7 @@
   justify-content: flex-end;
   color: #5495ff;
   font-size: 15px;
+  width: 200px;
 }
 .new-price {
   margin-bottom: 10px;

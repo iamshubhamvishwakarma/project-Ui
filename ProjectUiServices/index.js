@@ -493,7 +493,9 @@ app.get("/api/search", (req, res) => {
   } else {
     userQuery = req.query.query;
     search.getResult(userQuery, response => {
-      res.send(response);
+      setTimeout(() => {
+        res.send(response);
+      },1000);
     });
   }
 });
