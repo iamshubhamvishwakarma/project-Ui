@@ -11,8 +11,8 @@
     <div class="table-header amzo-card">
       <div class="filter">
         <div class="filter-heading-wrapper">
-          <div class="filter-heading">Filter</div>
-          <div class="filter-reset-icon">
+          <div class="filter-heading">FILTER</div>
+          <div class="filter-reset-icon" data-tooltip="Reset filter">
             <i class="fas fa-sync"></i>
           </div>
         </div>
@@ -35,10 +35,10 @@
       </div>
       <div class="grid-list-compare">
         <div class="grid-list-compare-wrapper">
-          <div class="grid-wrapper" [ngStyle]="{'color': isDisplayMode?'#5495ff':''}" (click)="displayGrid()">
+          <div class="grid-wrapper" [ngStyle]="{'color': isDisplayMode?'#5495ff':''}" (click)="displayGrid()" data-tooltip="Display in grid">
             <i class="fas fa-th"></i>
           </div>
-          <div class="list-wrapper" [ngStyle]="{'color': !isDisplayMode?'#5495ff':''}" (click)="displayList()">
+          <div class="list-wrapper" [ngStyle]="{'color': !isDisplayMode?'#5495ff':''}" (click)="displayList()" data-tooltip="Display in list">
             <i class="fas fa-list-ul"></i>
           </div>
           <div class="compare-heading">

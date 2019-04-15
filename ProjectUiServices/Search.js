@@ -68,7 +68,7 @@ module.exports = class SearchHelper {
         azResponse.ItemSearchResponse.Items.Item.forEach(element => {
           var azEle = {
             title: element.ItemAttributes.Title,
-            price: element.ItemAttributes.ListPrice.FormattedPrice,
+            price: element.ItemAttributes.ListPrice.FormattedPrice.slice(3),
             image: element.MediumImage.URL,
             offerPrice: element.OfferSummary.LowestNewPrice.FormattedPrice,
             productUrl: element.DetailPageURL,

@@ -4,22 +4,46 @@
   </div>
   <div class="item-details">
     <div class="item-name">{{ item.title }}</div>
-    <div class="item-category">{{ item.source }}</div>
+    <!-- <div class="item-category">{{ item.source }}</div> -->
   </div>
   <div class="right-option-wrapper">
     <div class="options">
       <div class="item-price">
-          <div class="new-price">₹ {{ item.offerPrice }}</div>
+        <div class="new-price">₹ {{ item.offerPrice }}</div>
         <div class="old-price">₹ {{ item.price }}</div>
-        
       </div>
-      <div class="offer">-{{ item.discountPercentage }}</div>
-      <div class="copy"><i class="fa fa-clipboard" aria-hidden="true"></i></div>
-      <div class="like"><i class="far fa-heart"></i></div>
-      <div class="share">
-        <i class="fa fa-share-alt" aria-hidden="true"></i>
+      <div class="column center">
+        <div class="row">
+          <div class="offer">-{{ item.discountPercentage }}</div>
+          <div class="copy" data-tooltip="copy to clipboard">
+            <i class="fa fa-clipboard" aria-hidden="true"></i>
+          </div>
+          <div class="like" data-tooltip="wishlist">
+            <i class="far fa-heart"></i>
+          </div>
+          <div class="share" data-tooltip="Share">
+            <i class="fa fa-share-alt" aria-hidden="true"></i>
+          </div>
+          <div class="buy-button ripple">Buy Now</div>
+          <div class="view-all ripple">View All</div>
+        </div>
       </div>
-      <div class="buy-button ripple">Buy Now</div>
+      <div class="available-on">
+       <div class="stores-wrapper">
+          <div class="first-store">
+              <img src="/assets/snapdeal.png" alt="" />
+            </div>
+            <div class="first-store">
+              <img src="/assets/paytm.png" alt="" />
+            </div>
+            <div class="first-store">
+              <img src="/assets/shopclues.png" alt="" />
+            </div>
+            <div class="first-store">
+              <img src="/assets/ebay2.png" alt="" />
+            </div>
+       </div>
+      </div>
     </div>
   </div>
 </div>
