@@ -25,7 +25,7 @@ import {
 export class AppComponent {
   title = "ProjectUi";
   terminalResultsDiv;
-  isSolidNavbar = false;
+  isSolidNavbar = true;// make this false
   @ViewChild("loader")
   loader: ElementRef;
   constructor(

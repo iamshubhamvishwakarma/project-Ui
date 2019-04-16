@@ -21,6 +21,7 @@
         autocomplete="true"
         placeholder="Search..."
         [(ngModel)]="searchString"
+        (keyup.enter)="search()"
       />
       <span class="icon" (click)="search()"><i class="fa fa-search"></i></span>
     </div>

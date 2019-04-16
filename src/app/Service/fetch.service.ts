@@ -13,7 +13,7 @@ export class FetchService {
 
   getItems(params?) {
     if (!params) {
-      this.apiUrl = "http://localhost:3000/api/todays-deal";
+      this.apiUrl = "http://localhost:3000/api/search?query=12344";
     } else {
       this.apiUrl = params;
     }

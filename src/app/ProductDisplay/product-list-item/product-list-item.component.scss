@@ -8,11 +8,12 @@
   position: relative;
 }
 .item-image {
+  width: 150px;
   padding: 20px 20px 10px 50px;
 }
 .item-image img {
   width: auto;
-  height: 100px;
+  height: 150px;
 }
 .item-details {
   display: flex;
@@ -37,7 +38,7 @@
   justify-content: flex-end;
   color: #5495ff;
   font-size: 15px;
-  width: 200px;
+  width: 150px;
 }
 .new-price {
   margin-bottom: 10px;
@@ -78,9 +79,11 @@
   display: inline-table;
   background: #000;
   color: #fff;
+  width: 20px;
   padding: 7px;
 }
-.buy-button, .view-all{
+.buy-button,
+.view-all {
   margin-left: 40px;
   height: 40px;
   padding: 10px 20px 10px 20px;
@@ -102,27 +105,27 @@
 .item-wrapper:hover {
   border-bottom: 2px solid rgb(255, 194, 41);
 }
-  .buy-button {
+.buy-button {
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
   background-color: #5495ff;
   color: #fff;
   border-color: rgba(223, 225, 229, 0);
 }
-.available-on{
+.available-on {
   position: absolute;
   bottom: 0;
-  right: 10px;
+  right: 30px;
 }
 
-.first-store img{
+.first-store img {
   height: 30px;
   width: 30px;
   border-radius: 30px;
   padding: 2px;
   margin: 2px;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28); 
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
   z-index: 1;
 }
-.stores-wrapper{
+.stores-wrapper {
   display: flex;
 }

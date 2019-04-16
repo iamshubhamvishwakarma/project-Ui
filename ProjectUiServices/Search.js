@@ -21,7 +21,7 @@ module.exports = class SearchHelper {
     let rawdata = fs.readFileSync("./dummydata/data.json");
     let student = JSON.parse(rawdata);
     callback(student);
-    
+
     // this.callApi(userQuery).then(totalResponse => {
     //   console.log(totalResponse);
     //   callback(totalResponse);
@@ -66,11 +66,16 @@ module.exports = class SearchHelper {
       console.log(fkResponse);
       if (azResponse) {
         azResponse.ItemSearchResponse.Items.Item.forEach(element => {
+          orgPrice =
+            element.ItemAttributes.ListPrice.FormattedPrice + "".slice(3);
+          offPrice =
+            element.OfferSummary.LowestNewPrice.FormattedPrice + "".slice(3);
+          console.log(orgPrice, offPrice);
           var azEle = {
             title: element.ItemAttributes.Title,
-            price: element.ItemAttributes.ListPrice.FormattedPrice.slice(3),
+            price: orgPrice,
             image: element.MediumImage.URL,
-            offerPrice: element.OfferSummary.LowestNewPrice.FormattedPrice,
+            offerPrice: offPrice,
             productUrl: element.DetailPageURL,
             discountPercentage:
               element.Offers.TotalOffers > 0
