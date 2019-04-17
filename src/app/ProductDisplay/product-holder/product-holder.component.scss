@@ -21,7 +21,7 @@ $border-color: #dde1e3;
   top: 50px;
   background: #ffffff;
   position: -webkit-sticky;
-  z-index: 1;
+  z-index: 10;//table header needs to be on top after navbar
 }
 .filter {
   width: 19%;

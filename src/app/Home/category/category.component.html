@@ -5,10 +5,16 @@
   </div>
   <div class="category-grid">
     <div class="grid-item" *ngFor="let griditem of categories">
-      <div class="item-icon">
-        <i class="{{ griditem.icon }}" [ngStyle]="{'color': griditem.color}" aria-hidden="true"></i>
-      </div>
-      <div class="item-title">{{ griditem.title }}</div>
+      <a href="" class="category">
+        <div class="item-icon">
+          <i
+            class="{{ griditem.icon }}"
+            [ngStyle]="{ color: griditem.color }"
+            aria-hidden="true"
+          ></i>
+        </div>
+        <div class="item-title">{{ griditem.title }}</div>
+      </a>
     </div>
   </div>
 </div>

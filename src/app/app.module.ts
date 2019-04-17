@@ -38,6 +38,7 @@ import { DealsComponent } from "./ViewAll/deals/deals.component";
 import { SitesComponent } from "./ViewAll/sites/sites.component";
 import { CategoriesComponent } from "./ViewAll/categories/categories.component";
 import { SearchResolver } from "./Service/search.resolver";
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,7 +80,8 @@ import { SearchResolver } from "./Service/search.resolver";
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

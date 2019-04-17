@@ -1,49 +1,10 @@
-<section class="wrapper advance-card">
-  <div class="slideshow">
-    <div class="slides">
-      <input type="radio" name="r" id="r1" checked />
-      <input type="radio" name="r" id="r2" />
-      <input type="radio" name="r" id="r3" />
-      <input type="radio" name="r" id="r4" />
-      <input type="radio" name="r" id="r5" />
-      <div class="slide s1">
-        <img
-          src="https://rukminim1.flixcart.com/flap/844/140/image/ce425625e412dfd6.jpg?q=50"
-          alt="img1"
-        />
+<carousel [(activeSlide)]="activeSlideIndex" >
+    <slide *ngFor="let slide of slides; let index=index">
+      <img class="slide-image" [src]="slide.image" alt="image slide" style="display: block; width: 100%;">
+   
+      <div class="carousel-caption">
+        <h4>Slide {{index}}</h4>
+        <p>{{slide.text}}</p>
       </div>
-      <div class="slide">
-        <img
-          src="https://rukminim1.flixcart.com/flap/844/140/image/ce425625e412dfd6.jpg?q=50"
-          alt="img1"
-        />
-      </div>
-      <div class="slide s1">
-        <img
-          src="https://cdn.pixabay.com/photo/2018/09/08/18/47/corn-3663086_960_720.jpg"
-          alt="img1"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="https://cdn.pixabay.com/photo/2019/01/27/22/33/chipmunk-3959206_960_720.jpg"
-          alt="img1"
-        />
-      </div>
-      <div class="slide">
-        <img
-          src="https://cdn.pixabay.com/photo/2018/09/08/18/47/corn-3663086_960_720.jpg"
-          alt="img1"
-        />
-      </div>
-
-      <div class="navigation">
-        <label for="r1" class="bar"></label>
-        <label for="r2" class="bar"></label>
-        <label for="r3" class="bar"></label>
-        <label for="r4" class="bar"></label>
-        <label for="r5" class="bar"></label>
-      </div>
-    </div>
-  </div>
-</section>
+    </slide>
+  </carousel>

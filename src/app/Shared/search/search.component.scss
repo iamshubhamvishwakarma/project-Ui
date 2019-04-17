@@ -4,7 +4,6 @@ $line-color: #909090;
   border-color: rgba(223, 225, 229, 0);
 }
 .search-wrapper {
-  margin-top: 5px;
   width: 40%;
   left: 50%;
   transform: translateX(-50%);
@@ -13,14 +12,17 @@ $line-color: #909090;
   border-radius: 5px;
   background: #ffffff;
   z-index: 99;
+  margin: 8px 5px;
 }
 .search-box {
-  padding: 5px;
-
+  
+  padding: 8px;
   border-radius: 5px;
   outline: none;
-  margin: auto;
   transition: 0.3s;
+}
+.icon {
+  margin-right: 10px;
 }
 .search-box input {
   width: 90%;
