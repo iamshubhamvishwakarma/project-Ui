@@ -17,7 +17,9 @@ const routes: Routes = [
     component: ProductHolderComponent,
     resolve: { message: SearchResolver }
   },
-  { path: "search/sites/:id", component: ProductHolderComponent },
+  {path: "auth", loadChildren: "app/auth-module/auth-module#AuthModule"},
+  { path: "category/:cat-name", component: ProductHolderComponent },
+  { path: "sites/:id", component: ProductHolderComponent },
   { path: "home", component: HomeComponent },
   { path: "deals", component: DealsComponent },
   { path: "sites", component: SitesComponent },

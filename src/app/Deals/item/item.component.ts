@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { Item } from "src/app/Models/item";
+import { Data } from "src/app/Models/item";
 
 @Component({
   selector: "UI-item",
@@ -8,8 +8,12 @@ import { Item } from "src/app/Models/item";
 })
 export class ItemComponent implements OnInit {
   @Input()
-  item: Item;
+  item: Data;
   constructor() {}
 
   ngOnInit() {}
+  openItem(item: Data) {
+    console.log(item);
+    window.open(item.productUrl, "_blank");
+  }
 }

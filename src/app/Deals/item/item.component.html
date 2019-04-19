@@ -1,6 +1,9 @@
-<li class="">
-  <div class="card">
+<li (click)="openItem(item)">
+  <div class="card item-holder">
     <img src="{{ item.image }}" alt="{{ item.name }}" />
+    <span class="offer">
+      -21%
+    </span>
     <div class="container">
       <h4>
         <b class="item-name">{{ item.title }}</b>
